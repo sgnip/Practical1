@@ -1,0 +1,30 @@
+Preventive maintenance – add a tag for that
+
+General things to ask:
+- Can every handyman fix everything? May be there should be categories of faults to be fixed by some particular handyman.
+- Tracking handyman's time at work? To see how much have they worked or how much time is needed for some problems. Automatic or manual time tracking?
+- What happens if a handyman depends on something external to fix some fault? Nothing, right?
+
+
+
+
+Wunderlist: 
+- Nice interface to take into account for the task management.
+- Maybe shared list's so every handyman in science building can see pending task of others. (to ask)
+- See completed faults you fix. (pretty obvious).
+- Dead line for each fault, automatically set by the system taking into account the priority and the category. (to ask) 
+
+
+Apple watch/YoApp/TapToTalk (to ask):
+- Add some sort of really fast communication between handymen, so they don't have to call one another.
+- Add few types of default messages like “I'm going” or “Impossible” or “Need help”
+- Things to think about:
++ ¿broadcast messages to all handyman? ¿Just to a few? Maybe making groups and you send notification to a group.
++ May be we should add some not so fast but more efficient communication way for handyman.
+
+Trello:
+- Public taskboard that anyone can see? Only registered members?
+- Add one more state to task (pending, working, finished or impossible) better than wunderlist system (done or todo).
+
+Asana: 
+Dead line = due date or hour date??
