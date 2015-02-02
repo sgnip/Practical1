@@ -19,8 +19,8 @@
 	\rfoot{}
 }
 
-\newcommand{\tbg}{Table guy\xspace}
-\newcommand{\tbgs}{Table guys\xspace}
+\newcommand{\tbg}{Handyman\xspace}
+\newcommand{\tbgs}{Handymen\xspace}
 \begin{document}
 
 \maketitle
@@ -76,6 +76,12 @@ The system automatically assigns tasks, depending on the location of the faults 
 
 Admin can set manually the task assignation.
 
+We should take care of the following situation:
+
+A \tbg works a lot and fix every task he was assigned, and, because he is free, the system assigns some more. On the other side, a \tbg is not working. As he has lot of pending task, system will not add more task to him. 
+
+Plus, we can't just count the number of faults fixed, because there are ones more difficult than others. May be we should add \textit{difficulty of fault} depending on category to try control the how much job you have been assigned.
+
 \subsection{Graphical interface}
 We have Guille's application in which we will add just a profile page in which users can see
 \begin{itemize}
@@ -109,7 +115,11 @@ When a fault is fix, the system will notify the user who reported it.
 \begin{itemize}
 \item When an emergency occurs in UAM (e.g., a fire, a flood...), does everyone get an alert?
 \item Gamified experience? Do we ``reward'' the user for reporting faults or shall we instead offer detailed reports so the IT department can reward users as they want?
+\item We should take care of the following situation:
 
+A \tbg works a lot and fix every task he was assigned, and, because he is free, the system assigns some more. On the other side, a \tbg is not working. As he has lot of pending task, system will not add more task to him. 
+
+If he can assure us every one will work normally, that will solve the problem.
 \end{itemize}
 
 
