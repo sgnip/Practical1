@@ -117,117 +117,9 @@ The FML system has been designed to resolve these problems making use of a user-
 \item Faults History.
 \end{itemize}
 
-There are several applications 'on the market' which are similar to our proposed app in some way or another and they could represent real and competitive alternatives to ours. However, none of these web applications can offer all the features FML offers (furthermore, we plan on adding some features which are not currently available in any of these applications), so our system is indeed the best solution proposed to solve the problems the UAM maintenance staff has to deal with. After our research of the Internet, a comparison of these competitors' applications is gathered in Annex B.
+There are several applications 'on the market' which are similar to our proposed app in some way or another and they could represent real and competitive alternatives to ours. However, none of these web applications can offer all the features FML offers (furthermore, we plan on adding some features which are not currently available in any of these applications), so our system is indeed the best solution proposed to solve the problems the UAM maintenance staff has to deal with. After our research of the Internet, a comparison of these competitors applications is gathered in Annex B.
 
-\chapter{Catalog of Requirements}
-
-\section{Document Service Requirements}
-
-\subsection{Functional}
-
-%%%%% Order requirements for subsystems defined above.
-
-\subsubsection{General Requirements}
-
-This requirements are defined for all roles inside FML (Admin, maintenance personnel on both levels and reporters)
-
-\subsubsection{Requirements about roles inside FML}
-
-We need to define 3 roles.
-
-\subsubsection{Reporter role} This is the role applied to anyone who want to report some fault. It will be taken into account if the person is a student, a PhD or a teacher.
-
-\subsubsection{Maintenance Personnel}
-
-This are the roles applied to people in charge of maintenance. There will be 2 subcategories inside of Maintenance Personnel.
-
-\begin{itemize}
-\item The people in charge of each department.
-\item The maintenance personnel responsible to fix the faults.
-\end{itemize}
-
-As there are 8 departments, there will be 8 categories. Each maintenance person should be tagged in, at least, 1 department. It is also compatible being in charge of a department and being responsible to fix faults.
-
-\paragraph{Exceptions} The \textbf{cleaning department} only needs a person in charge of the hole department and it is his responsibility to assign faults to their employees and to mark faults as solved.
-
-This department is also special because there is a different department in each faculty, so the must be at least 1 person in charge of each faculty cleaning department.
-
-
-\paragraph{Requirements focused on users}
-
-
-\subparagraph{Log in} Everyone must be able to login using UAM credentials. We will use the service provide by UAM to authenticate an user.
-
-If the user is login in a smartphone, the system shouldn't ask for the password more than once (except for some specific operations defined in the role-depending requirements, user role category (\ref{Specifics_Secure_Requirements_for_user}))
-
-\subparagraph{Lightweight application}
-FML will be lightweight so it will run in old versions (we will support releases made up to four years before FML release date) of Chrome, Firefox and Internet Explorer.
-
-\subparagraph{Updating profile} What if a student become a teacher and then his email needs to be changed? To fix this, every user must be able to update his profile's information.
-
-\subparagraph{Faults definition} Each fault will have 3 possible states: \textit{Pending to assign, assigned, solved}. If a fault can't be fixed, the administrator will take care of it.
-
-\paragraph{Requirements focused on maintenance personnel}
-
-\subparagraph{Categorizing faults} There should be categories to tag each fault depending on the estimated difficulty (numeric value between 1 and 5), the urgency (urgent or not) and the department who needs to take care of it.
-
-\subparagraph{Fault's assignments} FML will assign to maintenance personnel faults to be fixed (depending on the fault's category and maintenance person load of work and capability to solve the fault)
-
-This will be set automatically and the system's administrators will be able to reassign the faults as they pleased.
-
-The person in charge of a department will also be able to reassign faults that have been assigned to his department or to someone inside his department to his employees.
-
-As we mentioned before, the cleanings departments are special, because all cleaning faults in a building will be assign to the person in charge of that building's cleaning.
-
-\subparagraph{Task managing} Everyone from the maintenance personnel will have read access to the faults data base through a Graphical User Interface (GUI).
-
-They will just have write access to faults they have been assigned to.\footnote{Write access is needed so the maintenance person change fault's state to \textit{solved} or to \textit{in progress}.}
-
-The administrator will have write access to all faults in the system, and the person in charge of a department will have write access to all faults assigned to someone inside his department.
-
-\subparagraph{Communication} Maintenance person assigned to fix a fault should be able to ask the fault's reporter for more information.
-
-\subparagraph{When a fault is fixed} The maintenance person assigned (or the manager of that department) will mark as solved the fault. At that time, the reporter will get notify and thanked.
-
-\subparagraph{Duplicated faults} This is a big problem to be solved. What we propose to solve it has 2 aspects.
-\begin{itemize}
-\item FML will be able to mark as \textit{possible duplicate}, so all possible duplicates will be assign to the same maintenance person, so he can verify if they are actually duplicated.
-
-\item On the other side, to prevent duplicated faults reports, FML will show a message showing possible duplicates faults to the reporter. If the reporter marks the fault he is  as duplicated, he will earn some points too and will be added into the list of people to be notified when the task is solved.
-\end{itemize}
-
-\subsubsection{Role-depending requirements}
-
-\paragraph{Reporter} FML should provide users the following abilities:
-\begin{itemize}
-\item Reporting a fault with the following information: \textit{Location, photograph (optional) and description}
-\item See and check reported faults and see its state.
-\item Answer questions the maintenance personnel will ask about the reported fault.
-\item The specifics requirements where re-authentication is needed are: \textit{Answering questions asked by maintenance personnel}   \label{Specifics_Secure_Requirements_for_user}
-\end{itemize}
-
-
-\subsection{Non-Functional}
-
-\subsubsection{General Requirements}
-
-This requirements are defined for all roles inside FML (Admin, maintenance personnel and user)
-
-\paragraph{Profile} Everyone should have a profile with some private information such us name.
-
-\subparagraph{Statistics} In the profile page each user should be able to see the faults he has reported and it's state.
-
-Plus, he should be able to see his conversations with maintenance personnel.
-
-
-\subsubsection{Role-depending requirements}
-
-\paragraph{User Role}
-FML should provide users the following abilities:
-\begin{itemize}
-\item The interface to report a fault should be easy enough to let the user report the fault without losing much time.
-\item The amount of points earned should be visible and the information of how much points does the user need to earn ETCS credit should be visible inside FML.
-\end{itemize}
+\input{tex/Requirements.tex}
 
 
 \chapter{Design and Mock-ups}
@@ -323,7 +215,7 @@ The user will be able to see the faults he's been subscribed too, either because
 
 \textbf{To: } Guillermo Julián Moreno, Iván Márquez Pardo y Víctor de Juan Sanz.
 
-\textbf{Date, Time and Place: } 27/01/2015 from 14:35 ultil we finish Brainstorming session in Science building, module 17.
+\textbf{Date, Time and Place: } 27/01/2015 from 14:35 until we finish Brainstorming session in Science building, module 17.
 
 \textbf{Purpose} Finish brainstorming session.
 
