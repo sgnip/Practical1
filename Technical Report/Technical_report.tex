@@ -38,9 +38,7 @@
 The Autonomous University of Madrid (UAM) has reported the numerous problems it has on detecting faults that arise on its campus and its facilities, whose reparation usually takes excessive time and is poorly organised. A late detection of faults in the facilities delays its reparation, stopping its users to continue using them as normal and complicating the maintenance staff labour. Regarding the wishes of the campus users and realising the maintenance problems it has, the UAM has organised a contest to choose the best project proposal that solves them.
 This is where our organization, Triforce, enters the scene: we have analyzed the problem exhaustively and designed a web application, Fault Manager Lite (FML), that meets all the requirements expected, solves the problems and also includes new extra features that makes it even more useful.
 
-\paragraph{Purpose: }
-The purpose of this Software Requirements Specification (SRS) document is to provide a
-detailed description of the functionalities of the FML system. This document will cover each of the system's intended features, as well as offer a preliminary glimpse of the software application's User Interface (UI).
+\paragraph{Purpose} The purpose of this Software Requirements Specification (SRS) document is to provide a detailed description of the functionalities of the FML system. This document will cover each of the system's intended features, as well as offer a preliminary glimpse of the software application's User Interface (UI).
 
 \section{Structure}
 
@@ -57,13 +55,13 @@ detailed description of the functionalities of the FML system. This document wil
 \section{Methodology}
 
 The methodological procedure followed for preparing the SRS of the software system FML we have developed includes the following techniques:
-\begin{itemize}
-\item[1] Deep analysis of the information given by the UAM: the potential maintenance problem it has, the causes that lead to this problem and various aspects we must consider before proceeding to the next step (web application;  works on PCs, tablets and smartphones; target users; basic purpose).
-\item[2] Application of the technique of brainstorming to generate general ideas for the application. Brainstorming was then applied to these general ideas in order to give shape to them. The results of the brainstorm carried out are cleaned up in the Annex A. This step resulted on the detection of 5 subsystems.
-\item[3] Research on the Internet about other similar systems, analyzing the functionality of these systems and describing them in a structured way by specifying their advantages and disadvantages, and extracting good ideas to incorporate to our own project, increasing its market value. These ideas also helped putting the final touches to our ideas from the brainstorm.
-\item[4] Interview with one member of the UAM's technical staff. In this interview we clarified the obscure ideas we still had, and modified some of our previous ideas to adapt them to the answers given. The answers to the interview were well-considered; as the technical staff will be the main user of our application, their point of view is important to us.
-\item[5] Departing from the ideas obtained, defined the requirements (functional and non-functional) of the application and design attractive mock-ups that fulfill them. These mock-ups are only a demo and may change in the final version of the application.
-\end{itemize}
+\begin{enumerate}
+\item Deep analysis of the information given by the UAM: the potential maintenance problem it has, the causes that led to this problem and various aspects we must consider before proceeding to the next step (web application that must work on PCs, tablets and smartphones; target users; basic purpose).
+\item Application of the technique of brainstorming to generate ideas for the application. Brainstorming was then applied to these general ideas in order to give shape to them. The results of the brainstorm carried out are shown in the Annex A. This step resulted on the detection of 5 subsystems.
+\item Research on the Internet about other similar systems, analyzing the functionality of these systems and describing them in a structured way by specifying their advantages and disadvantages, and extracting good ideas to incorporate to our own project, increasing its market value. These ideas also helped putting the final touches to our ideas from the brainstorm.
+\item Interview with one member of the UAM's technical staff. In this interview we clarified the obscure ideas we still had, and modified some of our previous ideas to adapt them to the answers given. The answers to the interview were well-considered; as the technical staff will be the main user of our application, their point of view is important to us.
+\item Departing from the ideas obtained, defined the requirements (functional and non-functional) of the application and design attractive mock-ups that fulfill them. These mock-ups are only a demo and may change in the final version of the application.
+\end{enumerate}
 
 \chapter{Project Definition}
 
@@ -78,8 +76,7 @@ In summary, the users will be able to easily report faults on facilities they ar
 
 \section{Goals and functionalities}
 
-
-Our main goal is the development of an extreme-functional, bug-free web application, that runs either on PCs, tablets or smartphones and facilitates the labor of the maintenance staff of the UAM.
+Our main goal is the development of an extremely functional, bug-free web application, that runs either on PCs, tablets or smartphones and facilitates the labor of the maintenance staff of the UAM.
 
 Based on the jolly cooperation between the members of the UAM community (students, teaching and research staff and administration and services personnel) and the maintenance personnel of the facilities and installations of the UAM campus, this application has been designed to solved the potential maintenance problems that the UAM has declared to have.
 
@@ -88,13 +85,13 @@ The problems we aim to alleviate with this application include the following:
 
 \begin{itemize}
 \item Difficulty of detecting faults on facilities of the campus.
-\item Late detection of the problems, which implies late repairs of them.
+\item Late detection of the problems, which implies repairs are not done on time.
 \item Excessive resources and time wasted on revisions looking for potential faults.
 \item Bad coordination between members of the technical staff.
-\item Frequently overloading of some repairmen because of bad coordination.
+\item Frequent overloading of some repairmen because of bad coordination.
 \item Inability of a repairman to instantly inform that a fault has just been solved.
 \item Difficulty of the users to report faults to the maintenance services.
-The report system lacks of mobility functionality.
+The report system lacks of mobile functionality.
 \item Lack of real-time visualization of pending and finished repairs.
 \item Lack of real-time visualization of assigned tasks.
 \item No faults history.
@@ -105,15 +102,14 @@ The report system lacks of mobility functionality.
 
 The FML system has been designed to resolve these problems making use of a user-friendly interface, avoiding unnecessary or distracting buttons or effects. This system has been divided in several modules listed below, each of those offering one specific functionality and, in conjunction, solving the problems mentioned above:
 \begin{itemize}
-\item Task Manager:
-\item Report System:
-\item Notifications and Messaging System:
-\item Users and Profile Managers:
+\item Task Manager.
+\item Report System.
+\item Notifications and Messaging System.
+\item Users and Profile Managers.
 \item Faults History.
 \end{itemize}
 
-There are several applications 'on the market' which are similar to our proposed app in some way or another and they could represent real and competitive alternatives to ours. However, none of these web applications can offer all the features FML offers (furthermore, we plan on adding some features which are not currently available in any of these applications), so our system is indeed the best solution proposed to solve the problems the UAM maintenance staff has to deal with. After our research of the Internet, a comparison of these competitors applications is gathered in Annex B.
-
+There are several applications 'on the market' which are similar to our proposed app in some way or another and they could represent real and competitive alternatives to ours. However, none of these web applications can offer all the features FML offers (furthermore, we plan on adding some features which are not currently available in any of these applications), so our system is indeed the best solution proposed to solve the problems the UAM maintenance staff has to deal with. After our research of the Internet, a comparison of these competitors' applications is gathered in Annex B.
 
 \chapter{Catalog of Requirements}
 
@@ -152,25 +148,22 @@ This department is also special because there is a different department in each 
 \paragraph{Requirements focused on users}
 
 
-\subparagraph{Log in: } Everyone must be able to login using UAM credentials. We will use the service provide by UAM to authenticate an user.
+\subparagraph{Log in} Everyone must be able to login using UAM credentials. We will use the service provide by UAM to authenticate an user.
 
 If the user is login in a smartphone, the system shouldn't ask for the password more than once (except for some specific operations defined in the role-depending requirements, user role category (\ref{Specifics_Secure_Requirements_for_user}))
 
-\subparagraph{Lightweight application: }
-% Revisar esta frase, no me convence la sintaxis
-FML will be lightweight enough to be ran in  4 years old Chrome, Firefox, IE's versions.
+\subparagraph{Lightweight application}
+FML will be lightweight so it will run in old versions (we will support releases made up to four years before FML release date) of Chrome, Firefox and Internet Explorer.
 
-\subparagraph{Updating profile: } What if a student become a teacher and then his email needs to be changed? To fix this, every user must be able to update his profile's information.
+\subparagraph{Updating profile} What if a student become a teacher and then his email needs to be changed? To fix this, every user must be able to update his profile's information.
 
-\subparagraph{Faults definition: } Each fault will have 3 possible states: \textit{Pending to assign, assigned, solved}.
-
-If a fault is impossible to be fixed, it will correspond to the administrator to take care personally of it.
+\subparagraph{Faults definition} Each fault will have 3 possible states: \textit{Pending to assign, assigned, solved}. If a fault can't be fixed, the administrator will take care of it.
 
 \paragraph{Requirements focused on maintenance personnel}
 
-\subparagraph{Categorizing faults: } There should be categories to tag each fault depending on the estimated difficulty (numeric value between 1 and 5), the urgency (urgent or not) and the department who needs to take care of it.
+\subparagraph{Categorizing faults} There should be categories to tag each fault depending on the estimated difficulty (numeric value between 1 and 5), the urgency (urgent or not) and the department who needs to take care of it.
 
-\subparagraph{Fault's assignments: } FML will assign to maintenance personnel faults to be fixed (depending on the fault's category and maintenance person load of work and capability to solve the fault)
+\subparagraph{Fault's assignments} FML will assign to maintenance personnel faults to be fixed (depending on the fault's category and maintenance person load of work and capability to solve the fault)
 
 This will be set automatically and the system's administrators will be able to reassign the faults as they pleased.
 
@@ -178,26 +171,26 @@ The person in charge of a department will also be able to reassign faults that h
 
 As we mentioned before, the cleanings departments are special, because all cleaning faults in a building will be assign to the person in charge of that building's cleaning.
 
-\subparagraph{Task managing: } Everyone from the maintenance personnel will have read access to the faults data base through a Graphical User Interface (GUI).
+\subparagraph{Task managing} Everyone from the maintenance personnel will have read access to the faults data base through a Graphical User Interface (GUI).
 
-They will just have write access to faults they have been assigned to. \footnote{Write access is needed so the maintenance person change fault's state to \textit{solved} or to \textit{in progress}}
+They will just have write access to faults they have been assigned to.\footnote{Write access is needed so the maintenance person change fault's state to \textit{solved} or to \textit{in progress}.}
 
-Admin will have write access to all faults in the system, and the person in charge of a department will have write access to all faults assigned to someone inside his department.
+The administrator will have write access to all faults in the system, and the person in charge of a department will have write access to all faults assigned to someone inside his department.
 
-\subparagraph{Communication: } Maintenance person assigned to fix a fault should be able to ask the fault's reporter for more information.
+\subparagraph{Communication} Maintenance person assigned to fix a fault should be able to ask the fault's reporter for more information.
 
-\subparagraph{When a fault is fixed: } The maintenance person assigned (or the manager of that department) will mark as solved the fault. At that time, the reporter will get notify and thanked.
+\subparagraph{When a fault is fixed} The maintenance person assigned (or the manager of that department) will mark as solved the fault. At that time, the reporter will get notify and thanked.
 
-\subparagraph{Duplicated faults: } This is a big problem to be solved. What we propose to solve it has 2 aspects.
+\subparagraph{Duplicated faults} This is a big problem to be solved. What we propose to solve it has 2 aspects.
 \begin{itemize}
-\item FML will be able to mark as \textit{possible duplicated}, so all possible duplicates will be assign to the same maintenance people, so he can verify if they are duplicated or not.
+\item FML will be able to mark as \textit{possible duplicate}, so all possible duplicates will be assign to the same maintenance person, so he can verify if they are actually duplicated.
 
-\item On the other side, to prevent duplicated faults reports, FML will show a messages showing possible duplicates faults to the reporter. If the reporter marks the fault he is reporting as duplicated, he will earn some points too and will be added into the list of people to be notified when the task is solved.
+\item On the other side, to prevent duplicated faults reports, FML will show a message showing possible duplicates faults to the reporter. If the reporter marks the fault he is  as duplicated, he will earn some points too and will be added into the list of people to be notified when the task is solved.
 \end{itemize}
 
 \subsubsection{Role-depending requirements}
 
-\paragraph{Reporter: } FML should provide users the following abilities:
+\paragraph{Reporter} FML should provide users the following abilities:
 \begin{itemize}
 \item Reporting a fault with the following information: \textit{Location, photograph (optional) and description}
 \item See and check reported faults and see its state.
@@ -212,15 +205,16 @@ Admin will have write access to all faults in the system, and the person in char
 
 This requirements are defined for all roles inside FML (Admin, maintenance personnel and user)
 
-\paragraph{Profile: } Everyone should have a profile with some private information such us name.
-\subparagraph{Statistics: } In the profile page each user should be able to see the faults he has reported and it's state.
+\paragraph{Profile} Everyone should have a profile with some private information such us name.
+
+\subparagraph{Statistics} In the profile page each user should be able to see the faults he has reported and it's state.
 
 Plus, he should be able to see his conversations with maintenance personnel.
 
 
 \subsubsection{Role-depending requirements}
 
-\paragraph{User Role: }
+\paragraph{User Role}
 FML should provide users the following abilities:
 \begin{itemize}
 \item The interface to report a fault should be easy enough to let the user report the fault without losing much time.
@@ -228,7 +222,9 @@ FML should provide users the following abilities:
 \end{itemize}
 
 
-\chapter{Design of Mock-ups}
+\chapter{Design and Mock-ups}
+
+
 
 \chapter{Conclusions}
 
