@@ -30,7 +30,8 @@
 \maketitle
 \tableofcontents
 \newpage
-\chapter{Abstract}
+\begin{abstract}
+\end{abstract}
 
 \chapter{Introduction}
 
@@ -128,13 +129,13 @@ This requirements are defined for all roles inside FML (Admin, maintenance perso
 
 \subsubsection{Requirements about roles inside FML}
 
-We need to define 3 roles. 
+We need to define 3 roles.
 
-\subsubsection{Reporter role} This is the role applied to anyone who want to report some fault. It will be taken into account if the person is a student, a PhD or a teacher. 
+\subsubsection{Reporter role} This is the role applied to anyone who want to report some fault. It will be taken into account if the person is a student, a PhD or a teacher.
 
 \subsubsection{Maintenance Personnel}
 
-This are the roles applied to people in charge of maintenance. There will be 2 subcategories inside of Maintenance Personnel. 
+This are the roles applied to people in charge of maintenance. There will be 2 subcategories inside of Maintenance Personnel.
 
 \begin{itemize}
 \item The people in charge of each department.
@@ -143,7 +144,7 @@ This are the roles applied to people in charge of maintenance. There will be 2 s
 
 As there are 8 departments, there will be 8 categories. Each maintenance person should be tagged in, at least, 1 department. It is also compatible being in charge of a department and being responsible to fix faults.
 
-\paragraph{Exceptions} The \textbf{cleaning department} only needs a person in charge of the hole department and it is his responsibility to assign faults to their employees and to mark faults as solved. 
+\paragraph{Exceptions} The \textbf{cleaning department} only needs a person in charge of the hole department and it is his responsibility to assign faults to their employees and to mark faults as solved.
 
 This department is also special because there is a different department in each faculty, so the must be at least 1 person in charge of each faculty cleaning department.
 
@@ -155,13 +156,13 @@ This department is also special because there is a different department in each 
 
 If the user is login in a smartphone, the system shouldn't ask for the password more than once (except for some specific operations defined in the role-depending requirements, user role category (\ref{Specifics_Secure_Requirements_for_user}))
 
-\subparagraph{Lightweight application: } 
+\subparagraph{Lightweight application: }
 % Revisar esta frase, no me convence la sintaxis
-FML will be lightweight enough to be ran in  4 years old Chrome, Firefox, IE's versions. 
+FML will be lightweight enough to be ran in  4 years old Chrome, Firefox, IE's versions.
 
-\subparagraph{Updating profile: } What if a student become a teacher and then his email needs to be changed? To fix this, every user must be able to update his profile's information. 
+\subparagraph{Updating profile: } What if a student become a teacher and then his email needs to be changed? To fix this, every user must be able to update his profile's information.
 
-\subparagraph{Faults definition: } Each fault will have 3 possible states: \textit{Pending to assign, assigned, solved}. 
+\subparagraph{Faults definition: } Each fault will have 3 possible states: \textit{Pending to assign, assigned, solved}.
 
 If a fault is impossible to be fixed, it will correspond to the administrator to take care personally of it.
 
@@ -177,7 +178,7 @@ The person in charge of a department will also be able to reassign faults that h
 
 As we mentioned before, the cleanings departments are special, because all cleaning faults in a building will be assign to the person in charge of that building's cleaning.
 
-\subparagraph{Task managing: } Everyone from the maintenance personnel will have read access to the faults data base through a Graphical User Interface (GUI). 
+\subparagraph{Task managing: } Everyone from the maintenance personnel will have read access to the faults data base through a Graphical User Interface (GUI).
 
 They will just have write access to faults they have been assigned to. \footnote{Write access is needed so the maintenance person change fault's state to \textit{solved} or to \textit{in progress}}
 
@@ -185,7 +186,7 @@ Admin will have write access to all faults in the system, and the person in char
 
 \subparagraph{Communication: } Maintenance person assigned to fix a fault should be able to ask the fault's reporter for more information.
 
-\subparagraph{When a fault is fixed: } The maintenance person assigned (or the manager of that department) will mark as solved the fault. At that time, the reporter will get notify and thanked. 
+\subparagraph{When a fault is fixed: } The maintenance person assigned (or the manager of that department) will mark as solved the fault. At that time, the reporter will get notify and thanked.
 
 \subparagraph{Duplicated faults: } This is a big problem to be solved. What we propose to solve it has 2 aspects.
 \begin{itemize}
