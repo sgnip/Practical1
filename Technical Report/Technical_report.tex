@@ -9,7 +9,15 @@
 \usepackage{xspace}
 \usepackage{graphicx}
 \usepackage{tikz}
-\usepackage{float}
+\usepackage{wrapfig}
+\usepackage{hyperref}
+
+\hypersetup{
+  hyperindex,
+    colorlinks,
+    allcolors=blue!60!black
+}
+
 
 \setcounter{secnumdepth}{3}
 
@@ -224,7 +232,74 @@ FML should provide users the following abilities:
 
 \chapter{Design and Mock-ups}
 
+\begin{figure}[hbtp]
+\centering
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/MainPage.png}
+\end{minipage}
+\hspace{0.1\textwidth}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/Settings.png}
+\end{minipage}
+\caption{Main page and settings page for Fault Manager Lite}
+\label{imgMainPage}
+\end{figure}!
 
+We show some mock-ups of the application, specifically designed to show the flow in certain use cases.
+
+\section{Reporting a fault}
+
+From the main screen (figure \ref{imgMainPage}), when the user presses the button ``Report'', he will be able to choose a category for the fault, then will fill the details and then get a page acknowledging the report and showing the estimated response time (figure \ref{imgReportFlow}).
+
+\begin{figure}[hbtp]
+\centering
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/Categories.png}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/ReportPage.png}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/ReportReceived.png}
+\end{minipage}
+\caption{Basic flow for reporting a fault.}
+\label{imgReportFlow}.
+\end{figure}
+
+For the location, we will show the user a map and also a list with all the possible options (figure \ref{imgLocation}). The user will be able to select specific places (for example, a certain lab or classroom) or more generic (e.g., third floor or the whole building). If localization APIs are available on the device (either location by AGPS or WiFi), the application will use them to show the user the best location option.
+
+
+\begin{figure}[hbtp]
+\centering
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/Map.png}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/Location.png}
+\end{minipage}
+\caption{Location screens for the application}
+\label{imgLocation}
+\end{figure}
+
+\section{Fault tracking}
+
+\begin{figure}[hbtp]
+\centering
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/FaultLog.png}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/Messaging.png}
+\end{minipage}
+\caption{Fault log and messaging screen for the application.}
+\label{imgTracking}
+\end{figure}
+
+The user will be able to see the faults he's been subscribed too, either because he reported them or because he marked them as duplicated. The figure \ref{imgTracking} shows how can he see all his faults and the chat screen that will show up if the technicians need to clarify details of the report.
 
 \chapter{Conclusions}
 
