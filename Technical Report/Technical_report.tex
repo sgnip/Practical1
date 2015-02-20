@@ -125,6 +125,28 @@ There are several applications 'on the market' which are similar to our proposed
 
 \chapter{Design and Mock-ups}
 
+\section{Motivation}
+
+This application's purpose is to solve a problem, not to create new. Thus, the design should not interfere with the technicians or the users work. Instead, it must reduce friction to almost zero, so it has to be easy to use and easy to learn. Adoption by the student corp of the application is critical to this project, so the design should accommodate to this requirement.
+
+We want the application to be full-featured, so all the users of the app should be able to use all the features from whichever device they're working in: tablet, smartphone or PC. We don't want anybody to stop reporting a fault because they don't have their laptop with them, for example.
+
+This leads to a natural decision regarding the technologies used to develop the interface: we will use web technologies and responsive design to maximize code reuse. In this way, we will be able to deliver a high quality user experience and homogeneous among devices with minimal code and improved maintainability.
+
+In turn, this will allow us to reduce costs and will make the development more agile, as we will be able to deliver quickly changes to the application responding to feedback from users.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.8\textwidth]{img/WideScreens.png}
+\caption{Sample responsive design in wide screens (laptops, tablets in landscape position, PCs) with the menu showing up and large interface elements .}
+\label{imgWideScreens}
+\end{figure}
+
+In this report, we will include, for brevity, the mockups for a mobile application, as we consider it will be the most used interface for the system. Given that we will be using responsive design, the looks will be the same for every device, except for widened interface elements and a navigation menu that shows up if there's enough space (see figure \ref{imgWideScreens} compared with the corresponding mobile view on figure  \ref{imgFaultLog}).
+
+\section{Design}
+
 \begin{figure}[hbtp]
 \centering
 \begin{minipage}{0.3\textwidth}
@@ -140,9 +162,9 @@ There are several applications 'on the market' which are similar to our proposed
 
 We show some mock-ups of the application, specifically designed to show the flow in certain use cases.
 
-\section{Reporting a fault}
+\subsection{Reporting a fault}
 
-From the main screen (figure \ref{imgMainPage}), when the user presses the button ``Report'', he will be able to choose a category for the fault, then will fill the details and then get a page acknowledging the report and showing the estimated response time (figure \ref{imgReportFlow}).
+From the main screen (figure \ref{imgMainPage}), when the user presses the button ``Report'', he will be able to choose a category for the fault, then will fill the details and then get a page acknowledging the report and showing the estimated response time (figure \ref{imgReportFlow}). They may see a message popup (\ref{imgDuplicateReport}) if a possible duplicated report is detected.
 
 \begin{figure}[hbtp]
 \centering
@@ -161,6 +183,13 @@ From the main screen (figure \ref{imgMainPage}), when the user presses the butto
 \label{imgReportFlow}.
 \end{figure}
 
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.3\textwidth]{img/DuplicateMessage.jpg}
+\caption{When a possible duplicate is found, the user is asked if he or she wnats to continue with the report.}
+\label{imgDuplicateReport}
+\end{figure}
+
 For the location, we will show the user a map and also a list with all the possible options (figure \ref{imgLocation}). The user will be able to select specific places (for example, a certain lab or classroom) or more generic (e.g., third floor or the whole building). If localization APIs are available on the device (either location by AGPS or WiFi), the application will use them to show the user the best location option.
 
 
@@ -177,7 +206,7 @@ For the location, we will show the user a map and also a list with all the possi
 \label{imgLocation}
 \end{figure}
 
-\section{Fault tracking}
+\subsection{Fault tracking}
 
 \begin{figure}[hbtp]
 \centering
@@ -193,6 +222,62 @@ For the location, we will show the user a map and also a list with all the possi
 \end{figure}
 
 The user will be able to see the faults he's been subscribed too, either because he reported them or because he marked them as duplicated. The figure \ref{imgTracking} shows how can he see all his faults and the chat screen that will show up if the technicians need to clarify details of the report.
+
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.3\textwidth]{img/AllFaults.jpg}
+\caption{The users can see all the faults.}
+\label{imgAllFaults}
+\end{figure}
+
+As specified on the requirements, the users will be able to see all the faults in the system (figure \ref{imgAllFaults}). To improve usability, we will include a search option so the users can find teh reports they're interested in.
+
+\subsection{Interface for technicians}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.3\textwidth]{img/SolvedFault.jpg}
+\caption{The technicians will have controls to mark a fault as solved or communicate with the users.}
+\label{imgSolvedFault}
+\end{figure}
+
+To reduce costs and improve mantainability, most of the code and interface will be shared between user roles. This means that the common screens (main screen, settings, fault lists and report information) will be the same for technicians, with maybe some additional elements (see figure \ref{imgSolvedFault}).
+
+The technicians will be able to see their assigned tasks in a slightly modified interface of the one normal users see (figure \ref{imgFaultLog}), so they will be able to check the priority and state of the fault. The contextual menu of each task will allow the user to mark the fault as duplicate or assign it to someone (if the technician hasn't got managing responsibilities, he will only be able to assign the to him/herself).
+
+\begin{figure}[hbtp]
+\centering
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/TechFaultLog.jpg}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/TechAssign.jpg}
+\end{minipage}
+\caption{The technicians will see additional information in the faults page.}
+\label{imgFaultLog}
+\end{figure}
+
+\subsection{Interface for admins}
+
+\begin{figure}[hbtp]
+\centering
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/AssignRemoveUser.jpg}
+\end{minipage}
+\hspace{0.02\textwidth}
+\begin{minipage}{0.3\textwidth}
+\includegraphics[width=\textwidth]{img/Users.jpg}
+\end{minipage}
+\caption{The managers will be able to see all the users, change their role or remove them.}
+\label{imgUsers}
+\end{figure}
+
+
+As stated in the previous section, most of the code will be shared. This means that admins will mostly see the same screens as technicians with some minor tweaks. For example, when they list all the faults (figure \ref{imgFaultLog}), they will be able to assign them to any technician under their management.
+
+The screens that are specific to admins are shown in figure \ref{imgUsers}, they're related to the user management subsystem.
 
 \chapter{Conclusions}
 
