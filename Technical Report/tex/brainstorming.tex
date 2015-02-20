@@ -10,35 +10,34 @@ Every one uses the same application, but it will be shown a different menu depen
 \begin{itemize}
 \item \textbf{Admin role: } The person or people in charge of banning and modifying manually what was automatically set by the system.
 
-\item\textbf{Maintenance person:} You can see as a Maintenance person what task has been assigned to you and you can mark them as finished or as a false fault.
+\item\textbf{Maintenance person:} You can see, as a Maintenance person, what task has been assigned to you and you can mark them as finished or as a false fault.
 
 You can also ask for more information about the fault if it's not precise enough.
 
-\item \textbf{User role: }  We may define subroles such as professor, student or workers (waiters, secretaries ... ) because of the liability of each group of people.
+\item \textbf{User role: }  We may define sub roles such as professor, student or workers (waiters, secretaries, ... ) because of the liability of each group of people.
 
 \end{itemize}
 
-Everyone is a user and everyone can report faults but not  every one can be Maintenance person or user.
+Everyone is a user and everyone can report faults but not every one can be a Maintenance person or an user.
 
 \subsection{Task priority}
 We talked about 2 options:
 
 \begin{itemize}
-\item The user sets the priority of the task and the system has to take on account the liability of the user to set a real priority to the task.
+\item The user sets the priority of the task and the system has to take into account the reliability of the user, extracted from previous reports, to set a real priority to the task.
 
-\item There are tags and categories the user can add to the report and the system computes a real priority to the task.
+\item There are tags and categories the user can add to the report and the system computes a real priority to the task based on those.
 
-Within this idea we need to add \textit{others} category, just in case.
+This idea would require us to add \textit{others} category, as we can't describe every possible situation.
 \end{itemize}
 
 \subsection{Location}
 
-We have to distinguish 2 cases, if you are inside a building or not.
+We have to distinguish 2 cases: if you are inside a building or not.
 
-If you are not inside a building, the location will be automatic by GPS technology, but when faults are relative to inside of buildings material it will be necessary to ask the user the exact location. This will be ask by an interactive map.
+If you are not inside a building, the location will be automatically determined by GPS technology. However, when faults are located inside of buildings material, it will be necessary to ask the user the exact location. This will be achieved by the use of an interactive map and listings of the available locations inside the buildings (classrooms, laboratories, etc). 
 
-
-We will also use WiFi location because sometimes GPS is a slow technology to be set and reliable.
+We will also use WiFi positioning, based on known access points, to try to infer, if possible, the location of the fault without user intervention.
 
 \subsection{Manage task assignation}
 The system automatically assigns tasks, depending on the location of the faults and the Maintenance person and the availability of the maintenance personnel.
@@ -64,11 +63,10 @@ The admin can see profiles so before he can ban an user, he can check how many f
 
 
 \paragraph{Maintenance person interface}
-The interface will show by color code the faults assignments classifying  they by pending, solved or not started.
-
+The interface will show by color code the faults assignments classifying them as pending, solved or not started.
 
 \subsection{Repeated faults}
-When an user is going to report a fault, the system will suggest if it's repeated showing possible faults. If the users says it's a new fault, it will be still marked as a possible repeated fault.
+When an user is going to report a fault, the system will suggest if it's repeated showing possible duplicates. If the users says it's a new fault, it will be still marked as a possible repeated fault.
 
 When a task is assigned to a Maintenance person, all possible repeated faults will be assigned to the same Maintenance person. It's Maintenance person's responsibility to say if they are the same or not.
 
@@ -77,16 +75,16 @@ If they are not the same, the task will be enqueued and the system will automati
 
 \subsection{Communication}
 
-When a fault is fix, the system will notify the user who reported it.
+When a fault is fixed, the system will notify the user who reported it.
 
 \section{Questions to ask}
 
 \begin{itemize}
 \item When an emergency occurs in UAM (e.g., a fire, a flood...), does everyone get an alert?
-\item Gamified experience? Do we ``reward'' the user for reporting faults or shall we instead offer detailed reports so the IT department can reward users as they want? (Credit's ETCS reward is possible, in the same way as languages)
+\item Gamified experience? Do we ``reward'' the user for reporting faults or shall we instead offer detailed reports so the IT department can reward users as they want? (ECTS reward is possible).
 \item We should take care of the following situation:
 
-A Maintenance person works a lot and fix every task he was assigned, and, because he is free, the system assigns some more. On the other side, a Maintenance person is not working. As he has lot of pending task, system will not add more task to him. 
+A Maintenance person works a lot and fixes every task he was assigned. As he hasn't any more work assigned, the system assigns him more tasks. On the other side, suppose a Maintenance person is not working. As he has a lot of pending tasks, system will not add more tasks to him. 
 
 If he can assure us every one will work normally, that will solve the problem.
 \end{itemize}
