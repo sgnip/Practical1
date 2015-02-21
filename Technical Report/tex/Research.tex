@@ -1,40 +1,197 @@
 % -*- root: ../Technical_report.tex -*-
-\section{Suggested webpages to look at}
+\newcommand{\adv}{\item[\textcolor{green!60!black}{\checkmark}]}
+\newcommand{\dsv}{\item[\textcolor{red!60!black}{$\times$}]}
 
-Ivan's fault if this is empty xD
+We have summarized here the research on the Internet carried out in order to compare our web application Fault Manager Lite to other similar apps already on the market. For each of these potential competitors, we have mentioned some advantages and disadvantages and extracted some useful ideas that we could adapt or integrate into our own app.
 
-\section{Our own webpages to look at}
+\section{Suggested solutions}
+
+\subsection{UAM Maintenance Fault Report System}
+
+The current maintenance report system of the UAM is based on two simple forms: one for general revisions and the other one only for glass cabinets. These forms can be filled by members of the UAM community to have some facility repaired.
+
+\begin{itemize}
+\adv The user can choose the service required from a list of general services.
+\adv The user can specify  and describe more the task he/she has asked for.
+\adv Provides some fields in the form which give a precise location of the problem.
+\dsv The form that it provides is too basic.
+\dsv It does not let you attach a photo of the problem.
+\end{itemize}
+
+Ideas extracted:
+
+\begin{itemize}
+\item Fields on the fault report formulary to specify a precise location to the maintenance staff.
+\item Dropdown list allows to easily choose the service required.
+\end{itemize}
+
+\subparagraph{Link} \href{http://www.uam.es/ss/Satellite/es/1234886352057/1242647722813/servicio/servicio/Servicio_de_Mantenimiento.htm}{UAM Maintenance Fault Report System @ UAM.es}
+
+\subsection{Issues Tracking System (ITS)}
+
+Tool developed to be used as a task manager for software development teams, which will increase their performance thanks to it. It stores issues such as bugs or rquirements and then makes automatic assignments to the members of the team. Information chart and graphs can also be displayed to get an overall summary.
+
+\begin{itemize}
+\adv Magnificent software system that surely improves coordination of team members and delivers up-to-the-minute information about current issues (bugs, requirements), fostering better communication and collaboration.
+\adv Automatic assignment of tasks to members of the team.
+\adv Extremely detailed form for issues (bugs).
+\adv Statistic graphics that allow to get a general idea in just a quick view. Issues graphs grouped by: status, type, severity, users and priority.
+\adv Everyone involved in a project can obtain status, reports, charts and graphs showing trends and problem areas.
+\dsv Not user-friendly at all, as it has lots of different features and lots of details that complicate its usage for new users.
+\dsv Old-looking user interface.
+\end{itemize}
+
+Ideas extracted:
+
+\begin{itemize}
+\item The automatic assignment of tasks can suit well in our app, so that the maintenance tasks would be assigned automatically to the repairmen. This may require to separate the repairmen into groups, depending on the abilities they have.
+\item The issues form, although seems too detailed, could give us good ideas for our fault report forms.
+\item The team functionality is also desirable, as all the members of the technical staff would have access to up-to-the-minute information of pending and solved faults. This would solve coordination problems.
+\item The system statistics and summary charts could be useful to detect problem areas that should be revised more often.
+\end{itemize}
+
+\subparagraph{Link}\href{http://www.tdcsoftware.com/?q=en/node/15}{ITS @ TDC Software}
+
+\subsection{Clean Up Control}
+
+This application is used to manage the quality control of the cleanse service in any kind of area, no matter its structure. It saves information about every inspection made and shows the cleanse levels of each zone, giving more priority to those that have failed the inspection or it is still pending.
+
+\begin{itemize}
+\adv Profile information about clients, inspectors and managers.
+\adv Two modules: PC and PDA app (mobility).
+\adv Locations organised in a tree structure, which makes easier to find them in the app.
+\dsv Synchronization between the PC and the PDA requires direct cable connection or a modem accessory for the PDA.
+\dsv Obsolete user interface.
+\dsv Does not cover any kind of team coordination.
+\end{itemize}
+
+Ideas extracted:
+
+\begin{itemize}
+\item Organising all the locations in a tree structure is a good idea.
+\item The revisions of problem areas could be timetabled in the same way as they are in this application
+\end{itemize}
+
+\subparagraph{Link}\href{http://www.fourtrack.biz/documents/castella/Clean-Up%20Control.pdf}{Clean Up Control @ fourtrack.biz}
+
+\subsection{Línea verde}
+
+This website includes an Intranet for the town council, through which the incidents and facilities faults stated by the citizens are managed. Furthermore, it includes the visualizations of statistics and reports of the management.
+
+\begin{itemize}
+\adv Great mobility, being accessible by their website and also by smartphone (IOS and Android apps are available).
+\adv Automatic geolocation of the user when he/she sends a report.
+\adv Photo of the problem can be attached to your report.
+\adv Incidents are organised into different types to make easy to specify your problem.
+\adv Simple and user-friendly report system.
+\dsv Closed categories of faults stop the user from reporting any other kind.
+\end{itemize}
+
+Ideas extracted:
+
+\begin{itemize}
+\item Faults hierarchy or main categories into which we could organise our installations faults.
+\item Mobility (tablets, smartphones), geolocation and photo of the fault are already features we were planning to add to our system.
+\end{itemize}
+
+\subparagraph{Link} \href{http://www.lineaverdemunicipal.com/Default.aspx}{Línea Verde Municipal}
+
+\subsection{Reparaciudad}
+
+This extremely user-friendly application allows the user to report an incident in any street of Spain, choosing its typology and describing or uploading a photo of it. It also has at the users disposal a map containing the incidents reported by everyone, which serves to detect problem areas very easily.
+
+\begin{itemize}
+\adv Complete mobility, as the service is offered in PCs (internet browsers), but also on smartphones app (Android, IOS, Blackberry and Windows Phone platforms).
+\adv Hierarchy of incidents.
+\adv It shows a map with icons which represent the last incidents reported. Moreover, it also shows some useful information about those reports (type, date, exact location, status and other comments).
+\dsv Registration is needed in order to report incidents.
+\end{itemize}
+
+Ideas extracted:
+
+\begin{itemize}
+\item The map of the incidents is a superb idea which we will try to add to our system.
+\item The report system allows voting, which could give us an idea of the users that want that incident to be fixed.
+\end{itemize}
+
+\subparagraph{Link} \href{http://reparaciudad.com}{Reparaciudad}
+
+\subsection{In Situ Murcia}
+
+The town council of Murcia offers in this website a way to report any kind of incident or fault in the facilities of the city and request their repairs. This website goal is similar to reparaciudad, but limited to incidents in the region of Murcia.
+
+\begin{itemize}
+\adv No login needed, you just have to introduce your email and mobile phone number in order to send a report.
+\adv Very user-friendly and modern website.
+\adv It shows a map with icons which represent the last incidents reported. Moreover, these icons follow a colour code depending on their current status.
+\dsv No mobility alternatives.
+\dsv It is mandatory to send your geolocation in order to report an incident, becuase the service is limited to the region of Murcia.
+\end{itemize}
+
+Ideas extracted:
+
+\begin{itemize}
+\item The colour code of the icons in the map make it possible to get a general idea of the faults status in just one look.
+\end{itemize}
+
+\subparagraph{Link} \href{http://www.insitumurcia.es}{In Situ Murcia}
+
+\subsection{Madrid council fault report website}
+
+The town council of Madrid offers in this website a way to report any kind of incident or fault in the facilities of the city and request their repairs. This website goal is similar to reparaciudad, but limited to incidents in the region of Madrid.
+
+Trying to access this website, it says that we need some special certificates (electronic DNI) to report any kind of incident, so we have not been able to see the forms.
+
+\begin{itemize}
+\dsv Requires authentication with special certificates, which makes most of the people to leave the website instead of reporting faults of their city.
+\dsv Apart from links to two forms (which we could not access to), this website does not offer anything more: no map with incidents, no faults history, nothing special.
+\end{itemize}
+
+\section{Own research}
 
 \subsection{Wunderlist}
 
 \begin{itemize}
-\item Nice interface to take into account for the task management.
-\item Maybe shared list's so every handyman in science building can see pending task of others. (to ask)
-\item See completed faults you fix. (pretty obvious).
-\item Dead line for each fault, automatically set by the system taking into account the priority and the category. (to ask)
+\adv Nice interface to take into account for the task management.
+\adv Maybe shared lists so every handyman in a given building can see pending tasks assigned to other people.
+\adv See completed tasks: faults you've fixed..
+\adv Deadline for each fault, automatically set by the system taking into account the priority and the category.
+\dsv Hard to track tasks if there are a lot of them.
+\dsv An useful search system is not present.
 \end{itemize}
 
-
-\subsection{Apple watch/YoApp/TapToTalk}
+Ideas extracted
 
 \begin{itemize}
-\item Add some sort of really fast communication between handymen, so they don't have to call one another.
-\item Add few types of default messages like “I'm going” or “Impossible” or “Need help”
-\item Things to think about:
+\item Design carefully the interface so it's easy to use.
+\item Include a search system.
+\end{itemize}
+
+\subsection{Apple Watch}
+
+\begin{itemize}
+\adv Add some sort of really fast communication between handymen, so they don't have to call one another.
+\adv Add few types of default messages like “I'm going” or “Impossible” or “Need help”.
+\dsv Dedicated hardware required.
+\end{itemize}
+
+Ideas extracted:
+
 \begin{itemize}\label{AppleWatch}
 \item What about broadcasting messages to all handyman? Or may be just to a few of them? Maybe making groups and you send notification to a group.
-\item May be we should add some not so fast but more efficient communication way for handyman.
-\end{itemize}
+\item We could add some not so fast but more efficient communication way for handyman.
 \end{itemize}
 
 \subsection{Trello}
 
 \begin{itemize}
-\item Public taskboard that anyone can see? Only registered members?
-\item Add one more state to task (pending, working, finished) better than wunderlist system (done or todo).
+\adv Taskboard with access control (set to public or private).
+\adv Add one more state to task (pending, working, finished) better than wunderlist system (done or todo).
+\adv Really useful to get a global glance of all tasks.
+\dsv Data is not easily exportable.
 \end{itemize}
 
 \subsection{Asana}
 \begin{itemize}
- \item  Dead line for tasks in days or even in hours?
+\adv Deadline for tasks given in days or even in hours from now.
 \end{itemize}
