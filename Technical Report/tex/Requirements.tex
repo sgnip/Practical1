@@ -1,27 +1,30 @@
 % -*- root: ../Technical_report.tex -*-
 \chapter{Catalog of Requirements}
+
+Before we start defining FML's requirements we need to define two things, the \textbf{roles} inside FML and the \textbf{Operating environment} in which FML will work.
+
+
 \label{chapRequirements}
 \section{Roles}
-It is important to define which roles exists in FML.
 
-\paragraph{Reporter role} \label{ReporterRole} This is the role applied to anyone who want to report some fault. It will be taken into account if the person is a student, a PhD or a teacher.
+\paragraph{Reporter role} \label{ReporterRole} This is the role applied to anyone who want to report some fault. It will be taken into account the person's status inside UAM community (student, PhD, teacher, maintenance technician, etc). Every user in FML's system will be able to report faults.
 
 \paragraph{Maintenance Personnel} \label{MaintenancePersonnel}
 
-This are the roles applied to people in charge of maintenance. There will be 2 subcategories inside of Maintenance Personnel.
+This are the roles applied to people in charge of maintenance. Inside maintenance personnel we need to distinguish 2 subcategories:
 
 \begin{itemize}
-\item The people in charge of each department.
-\item The maintenance personnel responsible to fix the faults.
+\item Boss: The people in charge of each department.
+\item Maintenance technician: The maintenance personnel responsible to fix the faults.
 \end{itemize}
 
-As there are 8 departments, there will be 8 categories. Each maintenance person should be tagged in, at least, 1 department. It is also compatible being in charge of a department and being responsible to fix faults.
+As there are 8 departments, there will be 8 categories. Each maintenance person should be tagged in, at least, 1 department. It is also compatible being boss and technician.
 
 \paragraph{Exceptions} The \textbf{cleaning department} only needs a person in charge of the whole department and it is his responsibility to assign faults to their employees and to mark faults as solved.
 
-This department is also special because there is a different department in each faculty, so the must be at least 1 person in charge of each faculty cleaning department.
+This department is also special because there is a different department in each faculty, so the must be at least 1 person in charge of each faculty cleaning department. As we mentioned before, maintenance personnel can also report faults.
 
-\paragraph{Admin Role} Is the person (or group of people) in charge of UAM's maintenance system in general. All admins will have permissions to change everything, as they are the bosses of everything related with maintenance.
+\paragraph{Administrator Role} Is the person (or group of people) in charge of UAM's maintenance system in general. All administrator will have permissions to change everything, as they are in charge of everything related with maintenance.
 
 \section{Operating environment}
 
@@ -31,7 +34,7 @@ The system will require a backend exposing a RESTful API to which the HTML clien
 
 The server will require an installation of Python 3, and a working connection to a SQL server. Our application will be independent of the specific implementation of the server (database maintenance will be responsibility of the devops\footnote{I.e., the University's IT team.} team).
 
-Specific implementation details are out of the scope of this proposal, but we will develop the application with scalability in mind: the interface, API and database applications will be independent and loosely coupled in order for the dev-ops team to deploy each one to as many machines as needed. Cloud deployments are an option, but is not required (actually, we recommend using the university datacenter in order to comply with spanish privacy laws).
+Specific implementation details are out of the scope of this proposal, but we will develop the application with scalability in mind: the interface, API and database applications will be independent and loosely coupled in order for the devops team to deploy each one to as many machines as needed. Cloud deployments are an option, but is not required (actually, we recommend using the university datacenter in order to comply with spanish privacy laws).
 
 \section{Requirements}
 
@@ -108,13 +111,12 @@ If the user is logging in on a smartphone, the system shouldn't ask for the pass
 
 Plus, he should be able to see his conversations with maintenance personnel.
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \subsection{Non-Functional}
 
 \subsubsection{General Requirements}
 
-This requirements are defined for all roles inside FML (Admin, maintenance personnel and user)
+This requirements are defined for all roles inside FML (Administrator, maintenance personnel and user)
 
 \paragraph{Profile} Everyone should have a profile with some private information such as name or email.
 
@@ -128,6 +130,6 @@ This requirements are defined for all roles inside FML (Admin, maintenance perso
 \begin{itemize}
 \item The specifics requirements where re-authentication is needed are: \textit{Answering questions asked by maintenance personnel}   \label{Specifics_Secure_Requirements_for_user} and \textit{updating profile information}.
 \item The interface to report a fault should be easy enough to let the user report the fault without losing much time.
-\item The amount of points earned should be visible and the information of how much points does the user need to earn ECTS credit should be visible inside FML.
+\item The amount of points earned should be visible inside profiles page. It will be also shown the conversion in ECTS credits so the user knows how much he have earned.
 
 \end{itemize}
