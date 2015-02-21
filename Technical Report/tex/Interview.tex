@@ -1,48 +1,55 @@
 % -*- root: ../Technical_report.tex -*-
-\section{Interview}
 
-The 10th February 2015, we had an interview with the manager of the maintenance service of the UAM, Mr. Roberto. In the interview we clarified several aspects of the maintenance service in order to have a more detailed view of the problem and know by first hand how things are performed right now.\\
+\newcommand{\interviewer}[1]{\vspace{12pt}\indent \textbf{#1}:\hspace{10pt} \itshape}
+\newcommand{\interviewee}[1]{\\ \indent \upshape \textbf{#1}:\hspace{10pt}}
 
-This section gathers the most important points of this interview between us, Triforce representatives, and the maintenance manager.\\
+\newcommand{\tsc}{\interviewer{Triforce}}
+\newcommand{\rsc}{\interviewee{Mr. Roberto}}
+\newcommand{\ts}{\interviewer{T.}}
+\newcommand{\rs}{\interviewee{R.}}
 
-\textbf{Triforce:} Can you please tell us more about how is the maintenance service organized right now?\\
-\textbf{Mr.Roberto:} The maintenance service is quite decentralized in several groups depending on the tasks they perform. These groups are auto-organized, assigning repair tasks on their own and they don't contact me usually. This division into independent groups and the lack of coordination between them sometimes cause some budget and personnel problems.\\
+On February 10th 2015, we had an interview with the manager of the maintenance service of the UAM, Mr. Roberto. In the interview we clarified several aspects of the maintenance service in order to have a more detailed view of the problem and know by first hand how things are performed right now.
 
-\textbf{Triforce:} So, basically, you want us to try to centralize the maintenance service to sistematize the task assignment, right?\\
-\textbf{Mr.Roberto:} Yes, indeed.\\
+This section gathers the most important points of this interview between us, the Triforce representatives, and the maintenance manager.
 
-\textbf{T.:} How many different departments are there in total?\\
-\textbf{R.:} There are 9 different departments: Information Technologies, Electricity, Plumbers, Elevators, Heating, Air conditioning, Cleaning, Gardeners and Garbage collectors.\\
+\tsc Can you please tell us more about how is the maintenance service organized right now?
+\rsc The maintenance service is quite decentralized in several groups depending on the tasks they perform. These groups are auto-organized, assigning repair tasks on their own and they don't contact me usually. This division into independent groups and the lack of coordination between them sometimes cause some budget and personnel problems.
 
-\textbf{T.:} And you said they are auto-organized, but how?\\
-\textbf{R.:} They all received their corresponding repair tasks and they are manually assigned to members of each department. However, there are two departments that work in a different way: the Cleaning and the Information Technologies department.\\
+\tsc So, basically, you want us to try to centralize the maintenance service to sistematize the task assignment, right?
+\rsc Yes, indeed.
 
-\textbf{T.:} Can you give us more details about the Cleaning department?\\
-\textbf{R.:} Yes. The Cleaning department is formed by 8 different cleaning companies, each of those has a manager for the building they are in charge of. Your application should take that into account, because cleaning tasks will be assigned to the cleaning manager of the building the fault has been encountered. As they are different companies, that manager will internally assign that task to one of its employees; your application should not interfere in that.\\
+\ts How many different departments are there in total?
+\rs There are 9 different departments: Information Technologies, Electricity, Plumbers, Elevators, Heating, Air conditioning, Cleaning, Gardeners and Garbage collectors.
 
-\textbf{T.:} And what about the Information Technologies department? How do they organise?\\
-\textbf{R.:} Well, the Information Technologies department has its own application to automatically assign tasks. Their application is based on emails which are sent by the users, who fill a form in the maintenance service website. The system reads those emails and assigns the repair task automatically to a member of the technical staff; if it can't assign it automatically, then the manager of this department reads it and assigns it manually.\\
+\ts And you said they are auto-organized, but how?
+\rs They all received their corresponding repair tasks and they are manually assigned to members of each department. However, there are two departments that work in a different way: the Cleaning and the Information Technologies department.
 
-\textbf{T.:} You want us to overwrite this system or maintain it along with our app?\\
-\textbf{R.:} The organization of the Information Technologies department should be the same as the others, so this system must disappear when you finish setting up your app.\\
+\ts Can you give us more details about the Cleaning department?
+\rs Yes. The Cleaning department is formed by 8 different cleaning companies, each of those has a manager for the building they are in charge of. Your application should take that into account, because cleaning tasks will be assigned to the cleaning manager of the building the fault has been encountered. As they are different companies, that manager will internally assign that task to one of its employees; your application should not interfere in that.
 
-\textbf{T.:} Ok, we will overwrite the IT system... Can we count on their collaboration?\\
-\textbf{R.:} Yes, the whole maintenance service has agreed to start using your app in order to encourage the collaboration and coordination between departments.\\
+\ts And what about the Information Technologies department? How do they organise?
+\rs Well, the Information Technologies department has its own application to automatically assign tasks. Their application is based on emails which are sent by the users, who fill a form in the maintenance service website. The system reads those emails and assigns the repair task automatically to a member of the technical staff; if it can't assign it automatically, then the manager of this department reads it and assigns it manually.
 
-\textbf{T.:} Perfect. We have clarified some details of the old organization of the maintenance service, now let's concentrate on the new organization, our application. Are the staff used to mobile phones?\\
-\textbf{R.:} Yes, they are used to smartphones, but the more user-friendly you could make your app, the better.\\
+\ts You want us to overwrite this system or maintain it along with our app?
+\rs The organization of the Information Technologies department should be the same as the others, so this system must disappear when you finish setting up your app.
 
-\textbf{T.:} We will take it into account while making the mock-ups, don't worry about it. We had thought that it could be useful to include a system of alerts and notifications so that, in case of emergency (fire in a building, for example), a user could press a big button and all the other users of the app would receive an alert telling them information about the danger and its location.\\
-\textbf{R.:} It could be useful, indeed. It is a good idea to include it in the app.\\
+\ts Ok, we will overwrite the IT system... Can we count on their collaboration?
+\rs Yes, the whole maintenance service has agreed to start using your app in order to encourage the collaboration and coordination between departments.
 
-\textbf{T.:} We are pleased you like it. Would you like us to also include statistics of faults so that the manager could visualize them?\\
-\textbf{R.:} For me, it is pointless to create any type of statistics about faults. The only thing I need is a fault history, but no fault statistics.\\
+\ts Perfect. We have clarified some details of the old organization of the maintenance service, now let's concentrate on the new organization, our application. Are the staff used to mobile phones?
+\rs Yes, they are used to smartphones, but the more user-friendly you could make your app, the better.
 
-\textbf{T.:} In that case, fault statistics discarded. We thought that the urgency of faults should be set automatically, but users could classify faults as urgent while filling the report and their opinion would be automatically taken into account depending on their previous reports. Is this correct for you?\\
-\textbf{R.:} In the beginning, yes, it is. But there is one thing I need you to include: I must be able to classify manually a fault as urgent in order to be able to accelerate certain repairs.\\
+\ts We will take it into account while making the mock-ups, don't worry about it. We had thought that it could be useful to include a system of alerts and notifications so that, in case of emergency (fire in a building, for example), a user could press a big button and all the other users of the app would receive an alert telling them information about the danger and its location.
+\rs It could be useful, indeed. It is a good idea to include it in the app.
 
-\textbf{T.:} No problem, we will include that option in our system. One last question: what happens if users are not able to identify the category of a fault, how can we assign it to the corresponding member of the technical staff? For example, if there is a problem with the watering system and the user does not know if its a problem of plumbery or for the gardeners, what do we do with that report?\\
-\textbf{R.:} In case there are any unclassified or extraordinary reports, I, as general maintenance manager, will be in charge of reading them and manually assign their repair task to the correct technician.\\
+\ts We are pleased you like it. Would you like us to also include statistics of faults so that the manager could visualize them?
+\rs For me, it is pointless to create any type of statistics about faults. The only thing I need is a fault history, but no fault statistics.
 
-\textbf{T.:} Perfect, in that case, we have finished our interview. Thank you for your help, Mr. Roberto.\\
-\textbf{R.:} You are welcome, I am looking forward to see your application.\\
+\ts In that case, fault statistics discarded. We thought that the urgency of faults should be set automatically, but users could classify faults as urgent while filling the report and their opinion would be automatically taken into account depending on their previous reports. Is this correct for you?
+\rs In the beginning, yes, it is. But there is one thing I need you to include: I must be able to classify manually a fault as urgent in order to be able to accelerate certain repairs.
+
+\ts No problem, we will include that option in our system. One last question: what happens if users are not able to identify the category of a fault, how can we assign it to the corresponding member of the technical staff? For example, if there is a problem with the watering system and the user does not know if its a problem of plumbery or for the gardeners, what do we do with that report?
+\rs In case there are any unclassified or extraordinary reports, I, as general maintenance manager, will be in charge of reading them and manually assign their repair task to the correct technician.
+
+\ts Perfect, in that case, we have finished our interview. Thank you for your help, Mr. Roberto.
+\rs You are welcome, I am looking forward to see your application.
