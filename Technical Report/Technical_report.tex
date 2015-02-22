@@ -36,11 +36,13 @@
 
 \begin{document}
 \maketitle
+\input{tex/ChangeLogTable.tex}
+\begin{abstract}
+\input{tex/Abstract.tex}
+\end{abstract}
 \tableofcontents
 \newpage
 \pagestyle{plain}
-\begin{abstract}
-\end{abstract}
 
 \chapter{Introduction}
 
@@ -90,9 +92,9 @@ The methodological procedure followed for preparing the SRS of the software syst
 \begin{enumerate}
 \item Deep analysis of the information given by the UAM: the potential maintenance problem it has, the causes that led to this problem and various aspects we must consider before proceeding to the next step (web application that must work on PCs, tablets and smartphones; target users; basic purpose).
 \item Application of the technique of brainstorming to generate ideas for the application. Brainstorming was then applied to these general ideas in order to give shape to them. The results of the brainstorm carried out are shown in the Annex \ref{chapBrainstorming}. This step resulted on the detection of 5 subsystems.
-\item Research on the Internet about other similar systems, analyzing the functionality of these systems and describing them in a structured way by specifying their advantages and disadvantages, and extracting good ideas to incorporate to our own project, increasing its market value. These ideas also helped putting the final touches to our ideas from the brainstorm.
-\item Interview with one member of the UAM's technical staff. In this interview we clarified the obscure ideas we still had, and modified some of our previous ideas to adapt them to the answers given. The answers to the interview were well-considered; as the technical staff will be the main user of our application, their point of view is important to us. The interview it is included in annex \ref{chapInterview}.
-\item Departing from the ideas obtained, defined the requirements (functional and non-functional) of the application and design attractive mock-ups that fulfill them. These mock-ups are only a demo and may change in the final version of the application.
+\item Research on the Internet about other similar systems, analyzing the functionality of these systems and describing them in a structured way by specifying their advantages and disadvantages, and extracting good ideas to incorporate to our own project, increasing its market value. These ideas also helped putting the final touches to our ideas from the brainstorm. The research is included in annex \ref{chapCurrentTechnology}.
+\item Interview with one member of the UAM's technical staff. In this interview we clarified the obscure ideas we still had, and modified some of our previous ideas to adapt them to the answers given. The answers to the interview were well-considered; as the technical staff will be the main user of our application, their point of view is important to us. The interview is included in annex \ref{chapInterview}.
+\item Departing from the ideas obtained, define the requirements (functional and non-functional) of the application and design attractive mock-ups that fulfill them. These mock-ups are only a demo and may change in the final version of the application.
 \end{enumerate}
 
 \chapter{Project Definition}
@@ -320,22 +322,24 @@ Fault Manager Lite will be easily and quickly deployed: because of our care and 
 
 We consider the quality to price ratio of our proposal is high, and awarding the project to Triforce would be the best way to invest university assets  currently being wasted in an inefficient system.
 
+\chapter{References}
+\label{references}
+
+
 
 \appendix
 
 \chapter{Brainstorming}
 \label{chapBrainstorming}
-
 \input{tex/brainstorming.tex}
 
 
 \chapter{Evaluate current technology}
 \label{chapCurrentTechnology}
-
 \input{tex/Research.tex}
+
 \chapter{Meetings}
 \label{chapMeetings}
-
 \input{tex/meetings.tex}
 
 \chapter{Interview}
