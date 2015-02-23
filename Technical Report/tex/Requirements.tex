@@ -12,7 +12,7 @@ Before we start defining FML's requirements we need to define two things, the \t
 
 \paragraph{Maintenance Personnel} \label{MaintenancePersonnel}
 
-This are the roles applied to people in charge of maintenance. Inside maintenance personnel we need to distinguish 2 subcategories:
+These are the roles applied to people in charge of maintenance. Inside maintenance personnel we need to distinguish 2 subcategories:
 
 \begin{itemize}
 \item Boss: The people in charge of each department.
@@ -39,7 +39,7 @@ Each maintenance person should be tagged in, at least, 1 department. It is also 
 
 This department is also special because there is a different department in each faculty, so the must be at least 1 person in charge of each faculty cleaning department. As we mentioned before, maintenance personnel can also report faults.
 
-\paragraph{Administrator Role} Is the person (or group of people) in charge of UAM's maintenance system in general. All administrator will have permissions to change everything, as they are in charge of everything related with maintenance.
+\paragraph{Administrator Role} Is the person (or group of people) in charge of UAM's maintenance system in general. Every administrator will have permissions to change everything within the application, as they are in charge of everything related with maintenance.
 
 \section{Operating environment}
 
@@ -62,8 +62,7 @@ Specific implementation details are out of the scope of this proposal, but we wi
 If a fault is impossible to be fixed, it will correspond to the administrator to take care personally of it.
 
 
-\paragraph{Categorizing faults} There should be categories to tag each fault depending on the estimated difficulty (numeric value between 1 and 5), the urgency (urgent or not) and the department who needs to take care of it.
-
+\paragraph{Categorizing faults} There should be categories to tag each fault depending on the priority (low, medium or high) and the department who needs to take care of it. The system will assign automatically a priority to each fault, although the administrators will be able to change it at any point in time.
 
 \paragraph{Fault's assignments} FML will assign to maintenance personnel faults to be fixed (depending on the fault's category and maintenance person load of work and capability to solve the fault)
 
