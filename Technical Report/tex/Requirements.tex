@@ -107,6 +107,7 @@ Admin will have write access to all faults in the system, and the person in char
 
 \paragraph{Communication} Maintenance person assigned to fix a fault should be able to ask the fault's reporter for more information.
 
+\paragraph{Notifications} All users of the application are able to send an emergency notification which, once revised by the administrator, will appear on the noticeboard of the application of all other users specifying the type of emergency and its location. Among these emergencies, we can find fires or blackouts.
 
 \subsubsection{Users and Profile manager system}
 
@@ -152,5 +153,7 @@ This requirements are defined for all roles inside FML (Administrator, maintenan
 
 \begin{itemize}
 \item Change the role of a maintenance person.
-\item Remove permissions (fault reporting, messaging and/or read access to the fault list) from any user so they can't use the system.
+\item Remove permissions (fault reporting, messaging and/or read access to the fault list) from any user that has misused the application in order to prevent him from misbehaving.
+\item Restore permissions (fault reporting, messaging and/or read access to the fault list) to any user that was previously deprived of them.
+\item When banning a user, the administrator may choose a period of time: one week, one month, three months, one year, infinite. Once that period has passed, the user will automatically recover his/her permissions.
 \end{itemize}
